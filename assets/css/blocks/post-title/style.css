@@ -1,0 +1,16 @@
+/*
+ * Block: Post Title
+ */
+.wp-block-post-title a {
+	display: block;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+.wp-block-post-title a:not(:hover) {
+	text-decoration: none;
+}

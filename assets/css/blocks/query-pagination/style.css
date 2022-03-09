@@ -1,0 +1,28 @@
+/*
+ * Block: Pagination Numbers
+ */
+
+.wp-block-query-pagination-numbers .page-numbers {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 2em;
+	height: 2em;
+	padding: 0.5em;
+	white-space: nowrap;
+	line-height: 1;
+	border-radius: 5em;
+	text-decoration: none;
+	color: var(--wp--preset--color--contrast-higher);
+	will-change: transform;
+	transition: 0.2s;
+}
+
+.wp-block-query-pagination-numbers .page-numbers:not(.dots):active {
+	transform: translateY(2px);
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current {
+	background-color: var(--wp--preset--color--contrast-higher);
+	color: var(--wp--preset--color--background);
+}

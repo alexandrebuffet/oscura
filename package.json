@@ -1,0 +1,23 @@
+{
+	"name": "oscura",
+	"version": "1.0.0",
+	"description": "Oscura is an elegant and modern block-based theme especially designed for photographers, artists and all other creatives who want to showcase their work.",
+	"main": "index.js",
+	"author": "Alexandre Buffet <hello@alexandrebuffet.fr> (https://www.alexandrebuffet.fr/)",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/alexandrebuffet/oscura/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexandrebuffet/oscura.git"
+	},
+	"homepage": "https://github.com/alexandrebuffet/oscura#readme",
+	"devDependencies": {
+		"@wordpress/stylelint-config": "^19.1.0",
+		"stylelint": "^13.13.1"
+	},
+	"scripts": {
+		"lint:css": "stylelint **/*.css --fix -i .gitignore"
+	}
+}

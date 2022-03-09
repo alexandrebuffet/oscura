@@ -1,0 +1,346 @@
+/*
+Theme Name: Oscura
+Theme URI: https://themes.alexandrebuffet.fr/oscura
+Author: Alexandre Buffet
+Author URI: https://www.alexandrebuffet.fr/
+Description: Oscura is an elegant and modern block-based theme especially designed for photographers, artists and all other creatives who want to showcase their work.
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: oscura
+Tags: block-patterns, blog, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, grid-layout, one-column, photography, portfolio, rtl-language-support, template-editing, threaded-comments, translation-ready, wide-blocks
+
+Oscura WordPress Theme, (C) 2022 Alexandre Buffet
+Oscura is distributed under the terms of the GNU GPL.
+*/
+
+/*
+ * Reset spacing and padding and add smooth scroll.
+ */
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+/*
+ * Typography.
+ */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a,
+.wp-block-button__link {
+	transition: transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s,
+		-webkit-transform 0.2s;
+}
+
+a {
+	text-decoration-thickness: 0.1ch;
+	text-underline-offset: 0.25ch;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0;
+}
+
+p.has-drop-cap::first-letter {
+	font-family: var(--wp--preset--font-family--krona-one);
+}
+
+::-moz-selection {
+	background-color: var(--wp--preset--color--contrast-higher);
+	color: var(--wp--preset--color--background);
+}
+
+::selection {
+	background-color: var(--wp--preset--color--contrast-higher);
+	color: var(--wp--preset--color--background);
+}
+
+/*
+ * Simple form styles.
+ */
+textarea,
+select,
+form :where(button):not(.components-button),
+input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-search__input,
+.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-post-comments textarea {
+	font-size: var(--wp--custom--form-control--font-size);
+	font-family: var(--wp--preset--font-family--dm-sans);
+	line-height: var(--wp--custom--typography--line-height--body);
+	padding: var(--wp--custom--form-control--padding-y)
+		var(--wp--custom--form-control--padding-x);
+	border: none;
+	font-weight: 400;
+	box-shadow: inset 0px 0px 0px 2px var(--wp--preset--color--contrast-higher);
+	transition: transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s,
+		-webkit-transform 0.2s;
+}
+
+textarea,
+select,
+input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-search__input,
+.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-post-comments textarea {
+	background-color: var(--wp--preset--color--background);
+	color: var(--wp--preset--color--contrast-higher);
+}
+
+textarea:focus,
+select:focus,
+form:where(button):not(.components-button):focus,
+input:not([type="submit"]):not([type="checkbox"]):focus,
+.wp-block-search__input:focus,
+.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]):focus,
+.wp-block-post-comments textarea:focus {
+	outline-width: 2px;
+	outline-style: solid;
+	outline-offset: 2px;
+	outline-color: var(--wp--preset--color--contrast-higher);
+}
+
+textarea[aria-invalid="true"],
+select[aria-invalid="true"],
+form:where(button):not(.components-button)[aria-invalid="true"],
+input:not([type="submit"]):not([type="checkbox"])[aria-invalid="true"],
+.wp-block-search__input[aria-invalid="true"],
+.wp-block-post-comments
+	input:not([type="submit"]):not([type="checkbox"])[aria-invalid="true"],
+.wp-block-post-comments textarea[aria-invalid="true"] {
+	box-shadow: inset 0px 0px 0px 2px #b50603;
+}
+
+textarea[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus,
+form:where(button):not(.components-button)[aria-invalid="true"]:focus,
+input:not([type="submit"]):not([type="checkbox"])[aria-invalid="true"]:focus,
+.wp-block-search__input[aria-invalid="true"]:focus,
+.wp-block-post-comments
+	input:not([type="submit"]):not([type="checkbox"])[aria-invalid="true"]:focus,
+.wp-block-post-comments textarea[aria-invalid="true"]:focus {
+	outline-color: #b50603;
+}
+
+textarea[disabled],
+select[disabled],
+form:where(button):not(.components-button)[disabled],
+input:not([type="submit"]):not([type="checkbox"])[disabled],
+.wp-block-search__input[disabled],
+.wp-block-post-comments
+	input:not([type="submit"]):not([type="checkbox"])[disabled],
+.wp-block-post-comments textarea[disabled],
+textarea[readonly],
+select[readonly],
+form:where(button):not(.components-button)[readonly],
+input:not([type="submit"]):not([type="checkbox"])[readonly],
+.wp-block-search__input[readonly],
+.wp-block-post-comments
+	input:not([type="submit"]):not([type="checkbox"])[readonly],
+.wp-block-post-comments textarea[readonly] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.post-password-form input:not([type="submit"]) {
+	border-radius: var(--wp--custom--radius--base);
+}
+
+/*
+ * Button styles.
+ */
+input[type="submit"],
+form:where(button):not(.components-button):focus,
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--contrast-higher);
+	border: none;
+	border-radius: var(--wp--custom--radius--base);
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--custom--btn--font-size);
+	padding: var(--wp--custom--btn--padding-y) var(--wp--custom--btn--padding-x);
+}
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.9;
+}
+
+.wp-block-search__button:focus,
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-button__link:focus {
+	outline-width: 2px;
+	outline-style: solid;
+	outline-offset: 2px;
+	outline-color: var(--wp--preset--color--contrast-higher);
+}
+
+.wp-block-search__button:active,
+.wp-block-file .wp-block-file__button:active,
+.wp-block-button__link:active {
+	transform: translateY(2px);
+}
+
+.is-style-outline > :where(.wp-block-button__link) {
+	border: none;
+	box-shadow: inset 0 0 0 2px currentColor;
+}
+
+/*
+ * Alignment Styles.
+ * 
+ * From Twenty Twenty-Two theme.
+ *
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Oscura. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--component);
+	padding-right: var(--wp--custom--spacing--component);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-cover,
+body
+	> .is-root-container
+	> .wp-block-template-part
+	> .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--component)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--component)) !important;
+	width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+ .is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+ /* We also want to avoid stacking negative margins. */
+ .wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+ .is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+
+/*
+ * Site blocks gap
+ */
+.wp-site-blocks > * + * {
+	margin-top: 0 !important;
+}
+
+/*
+ * Container styles
+ */
+.wp-block-post-excerpt > *:first-child,
+.wp-block-cover .wp-block-cover__inner-container > *:first-child,
+.wp-block-column > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-post-excerpt > *:last-child,
+.wp-block-cover .wp-block-cover__inner-container > *:last-child,
+.wp-block-column > *:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * Block Captions
+ */
+.wp-block-embed figcaption,
+.wp-block-gallery figcaption,
+.wp-block-image figcaption,
+.wp-block-pullquote figcaption,
+.wp-block-quote figcaption,
+.wp-block-table figcaption {
+	color: var(--wp--preset--color--contrast-higher);
+	font-size: var(--wp--preset--font-size--small);
+	margin-bottom: 0;
+	margin-top: var(--wp--custom--spacing--sm);
+	text-align: center;
+}
+
+.wp-block-gallery figcaption {
+	margin-top: 0;
+}
+
+/*
+ * Utility Classes
+ */
+.position-sticky {
+	position: sticky;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.z-index-2 {
+	z-index: 2;
+}

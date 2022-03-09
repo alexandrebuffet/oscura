@@ -1,0 +1,24 @@
+name: WordPress.org Theme Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      ## We need to keep this around until Gutenberg 9.6 is launched.
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: 🚀 Theme Test
+        id: test
+        uses: Wordpress/theme-review-action@trunk
+        with:
+          accessible-ready: true
+          ui-debug: true

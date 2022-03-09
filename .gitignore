@@ -1,0 +1,16 @@
+# Ignore all files and directories starting with . or ~ or ._ or ending with ~
+.*
+~*
+*~
+._*
+# but track
+!.browserslist
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.github
+!.stylelintrc.json
+
+# Dependencies
+node_modules
+vendor

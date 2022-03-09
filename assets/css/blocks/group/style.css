@@ -1,0 +1,59 @@
+/*
+ * Block: Group
+ */
+
+.wp-block-group[class*="is-style-frame-"] {
+	--oscura--frame--aspect-ratio: 1/1;
+	--oscura--frame--image--aspect-ratio: 1/1;
+	--oscura--frame--image--scale-ratio: 0.618;
+	aspect-ratio: var(--oscura--frame--aspect-ratio);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	background-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--black);
+}
+
+.wp-block-group[class*="is-style-frame-"] .wp-block-image {
+	margin: 0;
+	width: 100%;
+	transform: scale(var(--oscura--frame--image--scale-ratio));
+}
+
+.wp-block-group[class*="is-style-frame-"] .wp-block-image img {
+	aspect-ratio: var(--oscura--frame--image--aspect-ratio);
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+.wp-block-group[class*="is-style-frame-"] .wp-block-image figcaption {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	color: inherit;
+}
+
+/* Group: Style 40x30 frame with A4 image  */
+.wp-block-group.is-style-frame-40x30-img-a4 {
+	--oscura--frame--aspect-ratio: 4/3;
+	--oscura--frame--image--aspect-ratio: 2.97/2.1;
+	--oscura--frame--image--scale-ratio: calc(2.97 / 4);
+}
+
+/* Group: Style 30x40 frame with A4 image */
+.wp-block-group.is-style-frame-30x40-img-a4 {
+	--oscura--frame--aspect-ratio: 3/4;
+	--oscura--frame--image--aspect-ratio: 2.1/2.97;
+	--oscura--frame--image--scale-ratio: calc(2.1 / 3);
+}
+
+/* Group: Style 40x40 with 30x30 image */
+.wp-block-group.is-style-frame-40x40-img-30 {
+	--oscura--frame--aspect-ratio: 1/1;
+	--oscura--frame--image--aspect-ratio: 1/1;
+	--oscura--frame--image--scale-ratio: calc(3 / 4);
+}

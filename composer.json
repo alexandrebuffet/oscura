@@ -1,0 +1,34 @@
+{
+	"name": "alexandrebuffet/oscura",
+	"type": "package",
+	"description": "Oscura is an elegant and modern block-based theme especially designed for photographers, artists and all other creatives who want to showcase their work.",
+	"keywords": [
+		"WordPress",
+		"Themes"
+	],
+	"homepage": "https://github.com/alexandrebuffet/oscura",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Alexandre Buffet",
+			"email": "hello@alexandrebuffet.fr",
+			"homepage": "https://www.alexandrebuffet.fr",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	},
+	"require-dev": {
+		"szepeviktor/phpstan-wordpress": "^0.7.7",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"wptrt/wpthemereview": "^0.2.1",
+		"php-parallel-lint/php-parallel-lint": "^1.3"
+	},
+	"scripts": {
+		"analyze": "@php ./vendor/bin/phpstan analyze",
+		"lint": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+		"standards:check": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"standards:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+	}
+}

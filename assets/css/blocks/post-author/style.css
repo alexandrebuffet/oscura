@@ -1,0 +1,18 @@
+/*
+ * Block: Author
+ */
+
+.wp-block-post-author {
+	align-items: center;
+}
+
+.wp-block-post-author__byline {
+	font-size: 0.875rem;
+	font-weight: 400;
+}
+
+.wp-block-post-author__avatar .avatar.photo {
+	display: block;
+	border-radius: 50%;
+	overflow: hidden;
+}

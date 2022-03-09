@@ -1,0 +1,37 @@
+/*
+ * Block: Post Terms
+ */
+
+.wp-block-post-terms.is-style-labels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+
+.wp-block-post-terms.is-style-labels.has-text-align-center {
+	justify-content: center;
+}
+
+.wp-block-post-terms.is-style-labels.has-text-align-right {
+	justify-content: flex-end;
+}
+
+.wp-block-post-terms.is-style-labels a {
+	display: inline-block;
+	background-color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--white);
+	padding: 0.125em 0.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	border: 1px solid var(--wp--preset--color--black);
+}
+
+.wp-block-post-terms.is-style-labels.taxonomy-post_tag a {
+	background-color: transparent;
+	color: var(--wp--preset--color--black);
+}
+
+.wp-block-post-terms.is-style-labels .wp-block-post-terms__separator {
+	display: none;
+}

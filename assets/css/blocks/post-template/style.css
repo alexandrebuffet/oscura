@@ -1,0 +1,36 @@
+/*
+ * Block: Query Loop
+ * These rules are temporary until Query Loop block supports block gap.
+ */
+
+.wp-block-post-template.is-flex-container,
+.wp-block-query-loop.is-flex-container {
+	gap: var(--wp--custom--spacing--component);
+}
+
+@media (min-width: 600px) {
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-2 > li,
+	.wp-block-query-loop.is-flex-container.is-flex-container.columns-2 > li {
+		width: calc((100% - var(--wp--custom--spacing--component)) / 2);
+	}
+
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li,
+	.wp-block-query-loop.is-flex-container.is-flex-container.columns-3 > li {
+		width: calc((100% - var(--wp--custom--spacing--component) * 2) / 3);
+	}
+
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-4 > li,
+	.wp-block-query-loop.is-flex-container.is-flex-container.columns-4 > li {
+		width: calc((100% - var(--wp--custom--spacing--component) * 3) / 4);
+	}
+
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-5 > li,
+	.wp-block-query-loop.is-flex-container.is-flex-container.columns-5 > li {
+		width: calc((100% - var(--wp--custom--spacing--component) * 4) / 5);
+	}
+
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-6 > li,
+	.wp-block-query-loop.is-flex-container.is-flex-container.columns-6 > li {
+		width: calc((100% - var(--wp--custom--spacing--component) * 5) / 6);
+	}
+}
