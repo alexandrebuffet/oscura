@@ -38,9 +38,6 @@ if ( ! function_exists( 'oscura_setup' ) ) {
 			)
 		);
 
-		// Remove core block patterns.
-		remove_theme_support( 'core-block-patterns' );
-
 		/*
 		* Load additional block styles.
 		* See details on how to add more styles in the readme.txt.
@@ -53,7 +50,6 @@ if ( ! function_exists( 'oscura_setup' ) ) {
 				'ver'    => OSCURA_VERSION,
 				$args['path'] = get_theme_file_path( "assets/css/blocks/$block_name/style.css" ),
 			);
-			// Replace the "core" prefix if you are styling blocks from plugins.
 			wp_enqueue_block_style( "core/$block_name", $args );
 		}
 	}
@@ -209,8 +205,8 @@ add_filter( 'excerpt_more', 'oscura_excerpt_more' );
  */
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
-// Add block patterns
+// Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
-// Add block styles
+// Add block styles.
 require get_template_directory() . '/inc/block-styles.php';
