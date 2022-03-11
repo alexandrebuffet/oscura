@@ -7,7 +7,7 @@ Requires PHP: 5.6
 Stable tag: 1.0.2
 Theme URI: https://themes.alexandrebuffet.fr/oscura
 Author: Alexandre Buffet
-Author URI: https://www.alexandrebuffet.fr/
+Author URI: https://www.alexandrebuffet.com/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://fonts.google.com/specimen/DM+20Sans
 
 # Images
+
+"Mont-Saint-Michel shot on film", 2021, by Alexandre Buffet. 
+License: Creative Commons CC0.
 
 "Illustration of the camera obscura principle", 18th century, by Unknown author. 
 License: Public Domain CC0.
