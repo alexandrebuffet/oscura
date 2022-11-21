@@ -1,6 +1,6 @@
 # Oscura
 
-Oscura is an elegant and modern block-based theme especially designed for photographers, artists and all other creatives who want to showcase their work. See the Oscura theme in action at [alexandrebuffet.com/themes/oscura](https://alexandrebuffet.com/themes/oscura).
+Oscura is an elegant and modern block-based theme especially designed for photographers, artists and all other creatives who want to showcase their work. See the Oscura theme in action at [alexandrebuffet.fr/themes/oscura](https://alexandrebuffet.fr/themes/oscura).
 
 ![Oscura for WordPress](https://user-images.githubusercontent.com/43843473/157986570-dbc909c8-6316-48ee-8a53-012118562a80.jpg)
 
@@ -38,7 +38,7 @@ Oscura adheres to the [WordPress coding standards](https://developer.wordpress.o
 
 ## Resources
 
-- [Oscura website](https://alexandrebuffet.com/themes/oscura)
+- [Oscura website](https://alexandrebuffet.fr/themes/oscura)
 - [Set up a development environment with Local](https://localwp.com/)
 - [Block Theme documentation](https://developer.wordpress.org/block-editor/how-to-guides/themes/block-theme-overview)
 - [Global Styles & theme.json documentation](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/)
